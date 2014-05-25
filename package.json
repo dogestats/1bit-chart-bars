@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/dogestats/1bit-chart-bars",
   "devDependencies": {
-    "tape": "^2.13.1"
+    "tape": "~2.13.1"
   },
   "testling": {
     "files": "test/*.js",

@@ -88,17 +88,17 @@ test.skip('data is stretched to fit height', function(t) {
     var input   = [1, 2, 3],
         options = {
             height: 6,
-            width: 6,
+            width: 3,
             padding: 0
         };
 
     var expected = [
-        [0, 0, 0, 0, 1, 1],
-        [0, 0, 0, 0, 1, 1],
-        [0, 0, 1, 1, 1, 1],
-        [0, 0, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1]
+        [0, 0, 1],
+        [0, 0, 1],
+        [0, 1, 1],
+        [0, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
     ];
 
     t.plan(1);

@@ -1,0 +1,29 @@
+{
+  "name": "1bit-chart-bars",
+  "version": "0.0.1",
+  "description": "Simple module for generating 1bit bar charts",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/chart.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dogestats/1bit-chart-bars.git"
+  },
+  "keywords": [
+    "chart",
+    "plot",
+    "graph",
+    "1bit",
+    "bars"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dogestats/1bit-chart-bars/issues"
+  },
+  "homepage": "https://github.com/dogestats/1bit-chart-bars",
+  "devDependencies": {
+    "tape": "^2.13.1"
+  }
+}

@@ -1,4 +1,4 @@
 1bit-chart-bars
 ===============
 
-Simple library for generating 1bit bar charts
+Simple module for generating 1bit bar charts

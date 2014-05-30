@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-- 0.8
-- "0.10"
-- 0.11
+  - 0.8
+  - "0.10"
+  - 0.11
+before_install:
+  - npm i npm@latest -g
 env:
   global:
   - secure: c3UcLxEeEld/+adgMG4wNTpu4QMtP1exxH2Ne4P10LAl/F+VZKG4t5XcvU56kS3Hsx6WGhJpgKUqDJ9ULjaBHjqEFjhLZOFIFfGhlQaqR67wYPqyCuNtJXVaEH2JcJTvJq7CbWjPSoak91XfO2C9fY2C0rcrLQ2LnMp2JocaLKw=

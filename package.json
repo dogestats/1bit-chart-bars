@@ -4,7 +4,9 @@
   "description": "Simple module for generating 1bit bar charts",
   "main": "index.js",
   "scripts": {
-    "test": "node test/chart.test.js"
+    "test": "node test/chart.test.js && node test/sauce.js",
+    "test-local": "node test/chart.test.js",
+    "test-browsers": "node_modules/brtapsauce/brtapsauce-local.js test/sauce.js"
   },
   "repository": {
     "type": "git",
@@ -24,19 +26,7 @@
   },
   "homepage": "https://github.com/dogestats/1bit-chart-bars",
   "devDependencies": {
+    "brtapsauce": "^0.3.0",
     "tape": "~2.13.1"
-  },
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/8..latest",
-      "chrome/22..latest",
-      "firefox/16..latest",
-      "safari/latest",
-      "opera/11.0..latest",
-      "iphone/6",
-      "ipad/6",
-      "android-browser/latest"
-    ]
   }
 }

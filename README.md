@@ -5,8 +5,7 @@ Simple module for generating 1bit bar charts
 
 [![Build Status](https://travis-ci.org/dogestats/1bit-chart-bars.svg?branch=master)](https://travis-ci.org/dogestats/1bit-chart-bars)
 
-[![browser support](https://ci.testling.com/dogestats/1bit-chart-bars.png)
-](https://ci.testling.com/dogestats/1bit-chart-bars)
+[![Browser Test Status](https://saucelabs.com/browser-matrix/1bit-chart-bars.svg)](https://saucelabs.com/u/1bit-chart-bars)
 
 # example
 

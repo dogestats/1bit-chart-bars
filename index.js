@@ -1,5 +1,7 @@
 'use strict';
 
+var ndbits = require('ndarray-bit');
+
 module.exports = function(data, opts) {
     var options  = opts || {},
         samples  = data.length,
@@ -17,10 +19,8 @@ module.exports = function(data, opts) {
         min   = options.min === undefined ? Math.min.apply(null, data) : options.min,
         scale = height / (max - min);
 
-    var chart = createArray(height).map(function() {
-        return createArray(width);
-    });
-
+    var chart = ndbits([height, width]);
+    
     var y, x, i, barStartX, barStartY;
     for (i = 0; i < samples; i++) {
         barStartX = (i * barWidth) + (i * padding);
@@ -28,14 +28,10 @@ module.exports = function(data, opts) {
         
         for (y = barStartY; y < height; y++) {
             for (x = barStartX; x < barStartX + barWidth; x++) {
-                chart[y][x] = 1;
+                chart.set(y, x, true);
             }
         }
     }
 
     return chart;
 };
-
-function createArray(ln) {
-    return Array.apply(null, new Array(ln)).map(Number.prototype.valueOf, 0);
-}

@@ -1,7 +1,7 @@
 1bit-chart-bars
 ===============
 
-Simple module for generating 1bit bar charts
+Simple module for generating 1bit bar charts. Outputs an [nd-array](https://github.com/mikolalysenko/ndarray) of bits.
 
 [![Build Status](https://travis-ci.org/dogestats/1bit-chart-bars.svg?branch=master)](https://travis-ci.org/dogestats/1bit-chart-bars)
 

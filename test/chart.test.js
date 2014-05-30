@@ -1,6 +1,14 @@
 var test = require('tape'),
     bars = require('../');
 
+function compare(t, expected, chart) {
+    for (var y = 0; y < expected.length; y++) {
+        for (var x = 0; x < expected[y].length; x++) {
+            t.equal(chart.get(y, x), expected[y][x] ? true : false);
+        }
+    }
+};
+
 test('plots correctly', function(t) {
     var input   = [1, 2, 3, 4, 5],
         options = {
@@ -21,8 +29,9 @@ test('plots correctly', function(t) {
         [1, 1, 1, 1, 1]
     ];
 
-    t.plan(1);
-    t.deepLooseEqual(bars(input, options), expected);
+    var chart = bars(input, options);
+    compare(t, expected, chart);
+    t.end();
 });
 
 test('width of bars auto-adjusts', function(t) {
@@ -41,8 +50,9 @@ test('width of bars auto-adjusts', function(t) {
         [1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
 
-    t.plan(1);
-    t.deepLooseEqual(bars(input, options), expected);
+    var chart = bars(input, options);
+    compare(t, expected, chart);
+    t.end();
 });
 
 test('width of bars auto-adjusts', function(t) {
@@ -61,8 +71,9 @@ test('width of bars auto-adjusts', function(t) {
         [1, 1, 0, 1, 1, 0, 1, 1, 0]
     ];
 
-    t.plan(1);
-    t.deepLooseEqual(bars(input, options), expected);
+    var chart = bars(input, options);
+    compare(t, expected, chart);
+    t.end();
 });
 
 test('removes padding on too many samples', function(t) {
@@ -80,8 +91,9 @@ test('removes padding on too many samples', function(t) {
         [1, 1, 1, 1, 1]
     ];
 
-    t.plan(1);
-    t.deepLooseEqual(bars(input, options), expected);
+    var chart = bars(input, options);
+    compare(t, expected, chart);
+    t.end();
 });
 
 test.skip('data is stretched to fit height', function(t) {
@@ -101,6 +113,7 @@ test.skip('data is stretched to fit height', function(t) {
         [1, 1, 1]
     ];
 
-    t.plan(1);
-    t.deepLooseEqual(bars(input, options), expected);
+    var chart = bars(input, options);
+    compare(t, expected, chart);
+    t.end();
 });

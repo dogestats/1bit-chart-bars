@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node test/chart.test.js && node test/sauce.js",
     "test-local": "node test/chart.test.js",
-    "test-browsers": "node_modules/brtapsauce/brtapsauce-local.js test/sauce.js"
+    "test-browsers": "node_modules/brtapsauce/brtapsauce-local.js test/chart.test.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,8 @@
   "devDependencies": {
     "brtapsauce": "~0.3.0",
     "tape": "~2.13.1"
+  },
+  "dependencies": {
+    "ndarray-bit": "0.0.0"
   }
 }

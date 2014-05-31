@@ -19,7 +19,7 @@ module.exports = function(data, opts) {
         min   = options.min === undefined ? Math.min.apply(null, data) : options.min,
         scale = height / (max - min);
 
-    var chart = ndbits([height, width]);
+    var chart = ndbits([width, height]);
     
     var y, x, i, barStartX, barStartY;
     for (i = 0; i < samples; i++) {
@@ -28,7 +28,7 @@ module.exports = function(data, opts) {
         
         for (y = barStartY; y < height; y++) {
             for (x = barStartX; x < barStartX + barWidth; x++) {
-                chart.set(y, x, true);
+                chart.set(x, y, true);
             }
         }
     }

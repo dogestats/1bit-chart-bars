@@ -1,10 +1,12 @@
+'use strict';
+
 var user       = process.env.SAUCE_USERNAME;
 var key        = process.env.SAUCE_ACCESS_KEY;
 var pkg        = require('../package.json');
 var path       = require('path');
 var brtapsauce = require('brtapsauce');
 
-var capabilities = capabilities = [
+var capabilities = [
     { browserName: 'chrome'            , platform: 'Windows 8' , version: ''   },
     { browserName: 'firefox'           , platform: 'Windows 8' , version: ''   },
     { browserName: 'internet explorer' , platform: 'Windows 8' , version: '10' },
